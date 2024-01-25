@@ -1,0 +1,22 @@
+.home-page {
+    padding: 1rem 0;
+    height: max-content;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-page > h1{
+    margin: 0;
+    padding: 0;
+    font-size: 5rem;
+    letter-spacing: 6px;
+}
+
+.home-page > h2{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    flex-grow: 1;
+}
