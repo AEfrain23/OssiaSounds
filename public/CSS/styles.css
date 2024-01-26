@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
   position: relative;
   font-family: Proxima-Nova;
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
