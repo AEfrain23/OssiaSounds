@@ -13,6 +13,7 @@ body {
   position: relative;
   font-family: Proxima-Nova;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -168,7 +169,7 @@ header {
 .content-border {
   margin: 10% auto;
   width: 60rem;
-  flex-grow: 1;
+  flex: 2;
 }
 
 
