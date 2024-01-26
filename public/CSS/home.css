@@ -1,3 +1,5 @@
+/* Tertiary Color: rgb(15,174,164); */
+
 .home-page {
     padding: 1rem 0;
     height: max-content;
@@ -7,16 +9,47 @@
     align-items: center;
 }
 
-.home-page > h1{
+.home-page > div{
+    margin: 0.75rem;
+    text-align: center;
+}
+
+.home-page h1{
     margin: 0;
     padding: 0;
     font-size: 5rem;
     letter-spacing: 6px;
 }
 
-.home-page > h2{
+.home-page h2{
     margin: 0;
     padding: 0;
+    font-size: 2.5rem;
     letter-spacing: 1px;
     flex-grow: 1;
+}
+
+.event-announcement {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.action-button {
+    padding: 5px 10px;
+    color: white;
+    background-color: rgba(15, 174, 163, 0.6);
+    /* Final number here (0.6) is for the opacity */
+    border-radius: 4px;
+    border: solid black 1px;
+    text-decoration: none;
+}
+
+.action-button > .text {
+    font-size: 1.5rem;
+}
+
+@media(max-width: 768px) {
+    .home-page h2{
+        font-size: 1.5rem;
+    }
 }
