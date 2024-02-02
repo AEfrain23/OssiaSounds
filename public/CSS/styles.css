@@ -186,15 +186,20 @@ header {
   flex: 1;
 }
 
-.subscribe-box {
+.subscribe-section {
+  width: 80%;
+  text-align: center;
+}
+
+.input-box {
   /* Remember, if we want to specify the fractions of space taken up by "flex" we must use 'fr'. e.g. 2fr. */
   /* flex: 0; */
-  width: 80%;
+  width: 100%;
   height: 3rem;
   display: flex;
 }
 
-.subscribe-box .card-one {
+.input-box .card-one {
   min-width: 5rem;
   flex: 2;
   display: flex;
@@ -208,7 +213,7 @@ header {
   outline: none;
 }
 
-.subscribe-box .card-two {
+.input-box .card-two {
   min-width: 5rem;
   flex: 2;
   display: flex;
@@ -221,7 +226,7 @@ header {
   outline: none;
 }
 
-.subscribe-box .card-three {
+.input-box .card-three {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -263,6 +268,13 @@ header {
     width: 100%;
     box-sizing: border-box;
     padding: 4rem 1rem 1rem 1rem;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .subscribe-section {
+    width: 100%;
   }
 }
 
