@@ -56,7 +56,7 @@ header {
   gap: 1rem;
 }
 
-.brand-container > img {
+.brand-container>img {
   height: 2rem;
 }
 
@@ -174,21 +174,86 @@ header {
 .content-border {
   margin: 5% auto;
   width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   flex: 2;
   color: white;
 }
 
+.home-page {
+  flex: 1;
+}
+
+.subscribe-box {
+  /* Remember, if we want to specify the fractions of space taken up by "flex" we must use 'fr'. e.g. 2fr. */
+  /* flex: 0; */
+  width: 80%;
+  height: 3rem;
+  display: flex;
+}
+
+.subscribe-box .card-one {
+  min-width: 5rem;
+  flex: 2;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border: solid white 2px;
+  /* This is removing the outline created when you click into a text input box. */
+  outline: none;
+}
+
+.subscribe-box .card-two {
+  min-width: 5rem;
+  flex: 2;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border: solid white 2px;
+  outline: none;
+}
+
+.subscribe-box .card-three {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(15, 174, 163);
+  border: solid white 2px;
+}
+
+/* Here we are using ':active' to alter the css of our button to change when the user is actively clicking. (We can also use ':visited', 
+':focus', ':hover') */
+.card-three:active {
+  background-color: rgb(15, 130, 120);
+}
+
+/* 
+::placeholder {
+  text-align: center; 
+} */
+
+
 
 @media (max-width: 1200px) {
   .content-border {
-    margin: 10% auto;
+    margin: 5% auto;
     width: 50rem;
   }
 }
 
 @media (max-width: 992px) {
   .content-border {
-    margin: 10% auto;
+    margin: 5% auto;
     width: 40rem;
   }
 }
