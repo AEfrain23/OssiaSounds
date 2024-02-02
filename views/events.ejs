@@ -1,10 +1,28 @@
 <%- include("partials/header") %>
 
-  <div class="page-content">
-    <h1>Events</h1>
+  <div class="content-border">
+    <div class="events-page">
+      <div>
+        <h1 class="page-title">EVENTS CALENDAR</h1>
+      </div>
+      <div class="events-album">
+        <div class="card">
+          <div>
+            <p style="font-style: italic; color: gray;">29th July 2023</p>
+            <p>Ossia Presents // Cristoph, Braxton, My Friend</p>
+          </div>
+          <a>Tickets</a>
+        </div>
+      </div>
+    </div>
+    <div class="subscribe-section">
+      <p>Subscribe to stay in the loop</p>
+      <div class="input-box">
+        <input class="card-one" type="text" placeholder="Name"></input>
+        <input class="card-two" type="text" placeholder="Email"></input>
+        <button class="card-three">Join Now</button>
+      </div>
+    </div>
   </div>
 
-  <script src="index.js"></script>
-  </body>
-
-  </html>
+  <%- include("partials/footer") %>
