@@ -211,6 +211,7 @@ header {
   border: solid white 2px;
   /* This is removing the outline created when you click into a text input box. */
   outline: none;
+  border-radius: 0;
 }
 
 .input-box .card-two {
@@ -224,6 +225,7 @@ header {
   background-color: black;
   border: solid white 2px;
   outline: none;
+  border-radius: 0;
 }
 
 .input-box .card-three {
