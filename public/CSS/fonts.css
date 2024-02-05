@@ -9,3 +9,9 @@
     font-weight: 500;
     src: url(../Fonts/Proxima\ Nova\ Regular.otf);
 }
+
+@font-face {
+    font-family: Proxima-Nova;
+    font-weight: 600;
+    src: url(../Fonts/Proxima\ Nova\ Semibold.otf);
+}
