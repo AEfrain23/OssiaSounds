@@ -19,9 +19,7 @@
 
 .card-image {
   width: 100%;
-  object-fit: contain;
   border: solid gray 1px;
-  aspect-ratio: 1 / 1;
 }
 
 .card-info {
