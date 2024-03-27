@@ -2,47 +2,59 @@
   text-align: center;
 }
 
-
-form {
+.contact-page form {
   width: 100%;
   box-sizing: border-box;
+  border-radius: 0px;
 }
 
-form * {
+.contact-page form * {
   box-sizing: border-box;
 }
 
-form .one {
+.contact-page form .one {
   display: flex;
   gap: 1rem;
 }
 
-.one>* {
+.contact-page .one>* {
   width: 100%;
 }
 
 
-form input {
+.contact-page form input {
   width: 100%;
   padding: 0.25rem;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  font-family: Proxima-Nova;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
-form textarea {
+.contact-page form textarea {
   width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  font-family: Proxima-Nova;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
-form .five {
+.contact-page form .five {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.item p {
+.contact-page .item p {
   margin: 1rem 0 0.5rem 0;
 }
 
 
-button {
+.contact-page button {
   margin: 1rem;
   padding: 0.35rem 0.5rem;
   background-color: transparent;
@@ -52,7 +64,7 @@ button {
 }
 
 
-button:hover {
+.contact-page button:hover {
   margin: 1rem;
   padding: 0.5rem;
   background-color: white;
@@ -61,7 +73,7 @@ button:hover {
   border: solid white 2.5px;
 }
 
-button:press {
+.contact-page button:press {
   margin: 1rem;
   padding: 0.5rem;
   background-color: white;
