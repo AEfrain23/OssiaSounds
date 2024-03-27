@@ -18,6 +18,10 @@ app.get("/events", (req, res) => {
   res.render("events.ejs");
 });
 
+app.get("/merch", (req, res) => {
+  res.render("merch.ejs");
+});
+
 app.get("/about", (req, res) => {
   res.render("about.ejs");
 });
