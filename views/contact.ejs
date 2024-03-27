@@ -1,10 +1,37 @@
 <%- include("partials/header") %>
 
-  <div class="page-content">
-    <h1>Contact</h1>
+  <div class="content-border">
+    <div class="contact-page">
+      <h1 class="page-title">ABOUT US</h1>
+      <div class="contact-intro">
+        <p>Please use the contact form below if you would like to get in touch!</p>
+      </div>
+      <form class="contact-form" action="/send-message" method="POST" >
+        <div class="item one">
+          <div class="firstName">
+            <p>First Name</p>
+            <input type="text" name="firstName" id="firstName" required>
+          </div>
+          <div class="secondName">
+            <p>Second Name</p>
+            <input type="text" name="secondName" id="secondName" required>
+          </div>
+        </div>
+        <div class="item three">
+          <p>Your Email</p>
+          <input type="email" name="customerEmail" id="customerEmail" required>
+        </div>
+        <div class="item four">
+          <p>Message</p>
+          <div>
+            <textarea class="item four" type="text" rows="10" name="customerMessage" id="customerMessage" required></textarea>
+          </div>
+        </div>
+        <div class="item five">
+          <button type="submit" class="send-button">SEND</button>
+        </div>
+      </form>
+    </div>
   </div>
 
-  <script src="index.js"></script>
-  </body>
-
-  </html>
+  <%- include("partials/footer") %>

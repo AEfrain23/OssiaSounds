@@ -1,0 +1,71 @@
+.contact-intro>p {
+  text-align: center;
+}
+
+
+form {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form * {
+  box-sizing: border-box;
+}
+
+form .one {
+  display: flex;
+  gap: 1rem;
+}
+
+.one>* {
+  width: 100%;
+}
+
+
+form input {
+  width: 100%;
+  padding: 0.25rem;
+}
+
+form textarea {
+  width: 100%;
+}
+
+form .five {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.item p {
+  margin: 1rem 0 0.5rem 0;
+}
+
+
+button {
+  margin: 1rem;
+  padding: 0.35rem 0.5rem;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  border: solid white 2.5px;
+}
+
+
+button:hover {
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  border: solid white 2.5px;
+}
+
+button:press {
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  border: solid white 2.5px;
+}
