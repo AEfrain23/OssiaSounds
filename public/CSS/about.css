@@ -19,16 +19,14 @@
   /* Here we are commenting out flex as this gives our images a fixed height. We need it to change.  */
 }
 
-@media(min-width: 1200) {
+@media(min-width: 1200px) {
   .about-card img {
-    background-color: black;
     flex: 1;
     /* Here we are commenting out flex as this gives our images a fixed height. We need it to change.  */
   }
   
   .about-card .info {
-    background-color: black;
-    flex: 3;
+    flex: 2;
     /* Here we are commenting out flex as this gives our images a fixed height. We need it to change.  */
   }
 }
@@ -48,7 +46,7 @@
 
 .about-card>img {
   width: 100%;
-  height: 25rem;
+  height: 24rem;
   object-fit: cover;
   overflow: hidden;
 }
