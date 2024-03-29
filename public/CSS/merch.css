@@ -4,7 +4,8 @@
 }
 
 .tshirts-hoodies {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
 
@@ -28,4 +29,13 @@
   padding: 0.4rem;
   width: 7rem;
   border-radius: 5rem;
+}
+
+
+@media(max-width: 768px) {
+  .tshirts-hoodies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
 }
