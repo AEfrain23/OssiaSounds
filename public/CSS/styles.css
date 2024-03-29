@@ -83,18 +83,39 @@ header {
   display: none;
 }
 
+.cart-container {
+  display: flex;
+  gap: 3rem;
+}
 
 
 @media (max-width: 1200px) {
   .navbar-container {
     width: 50rem;
   }
+
+  .menu-options {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .cart-container {
+    display: flex;
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 992px) {
   .navbar-container {
-    width: 40rem;
+    width: 45rem;
   }
+
+  .menu-options {
+    display: flex;
+    gap: 1rem;
+  }
+
+
 }
 
 @media (max-width: 768px) {
@@ -166,6 +187,12 @@ header {
 
   .menu-options>a {
     font-size: 1.25rem;
+  }
+
+  .cart-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
   }
 
 }
@@ -271,7 +298,7 @@ header {
 @media (max-width: 992px) {
   .content-border {
     margin: 5% auto;
-    width: 40rem;
+    width: 45rem;
   }
 }
 
