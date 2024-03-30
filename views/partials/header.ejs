@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <img class="background-image" src="Images/Site Background 1.jpg" alt="">
+<img class="background-image" src="Images/Site Background 1.jpg" alt="">
+
 <head>
   <meta charset="UTF-8" name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,10 +26,26 @@
       <div class="cart-container">
         <button aria-controls="navbar" aria-expanded="false" class="mobile-navbar-toggle"></button>
         <div class="cart-options" data-visible="false">
-          <div href="">Your Basket</div>
-          <div href="">Items</div>
-          <div href="">Total</div>
-          <div href="">Checkout</div>
+          <div class="card-one">
+            <div>Your Basket</div>
+            <span>
+              <svg class="inline-block h-3 w-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                viewBox="0 0 16 16">
+                <polygon
+                  points="16 13.74 13.74 16 8 10.26 2.26 16 0 13.74 5.74 8 0 2.26 2.26 0 8 5.74 13.74 0 16 2.26 10.26 8 16 13.74"
+                  fill="currentColor"></polygon>
+              </svg>
+              <span class="cart-close">Close</span>
+            </span>
+          </div>
+          <div class="card-two">Items</div>
+          <div class="card-three">
+            <span>Total</span>
+            <span>£25</span>
+          </div>
+          <div class="card-four">
+            <button>Checkout</button>
+          </div>
         </div>
         <div class="menu-options" data-visible="false">
           <a href="/">Home</a>
@@ -37,9 +54,10 @@
           <a href="/about">About</a>
           <a href="/contact">Contact</a>
         </div>
-        <svg aria-controls="cart" aria-expanded="false" class="mobile-cart-toggle"
-         xmlns="http://www.w3.org/2000/svg" width="22.5" height="22.5" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
-          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+        <svg aria-controls="cart" aria-expanded="false" class="mobile-cart-toggle" xmlns="http://www.w3.org/2000/svg"
+          width="22.5" height="22.5" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+          <path
+            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
         </svg>
       </div>
     </div>

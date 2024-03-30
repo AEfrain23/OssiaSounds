@@ -101,30 +101,71 @@ header {
 }
 
 .cart-options {
+  box-sizing: border-box;
+  padding: 1.25rem;
   z-index: -999;
   /* background-image: linear-gradient(black, rgb(50, 50, 50)); */
   background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   left: 5%;
   top: 116px;
   position: absolute;
   width: 90%;
   margin: auto;
   transform: translateY(-120%);
-  transition: ease-in 300ms;
-}
-
-.cart-options div {
-  color: black;
-  padding: 1rem;
+  transition: ease-in 250ms;
 }
 
 .cart-options[data-visible="true"] {
   transform: translateY(0%);
 }
 
+.cart-options>div {
+  color: black;
+}
+
+.cart-options svg {
+  position: relative;
+  top: 2.5px;
+}
+
+.cart-options .card-one {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.card-one > div {
+  font-size: 1.5rem;
+}
+
+.cart-options .card-two {
+  padding: 2rem 0;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+}
+
+.cart-options .card-three {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: 1.25rem;
+}
+
+.cart-options .card-four {
+  display: flex;
+  justify-content: end;
+}
+
+.cart-options button {
+  background-color: black;
+  color: white;
+  border: 0;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
 
 
 @media (max-width: 1200px) {
@@ -324,7 +365,7 @@ header {
 
 /* Here we are using ':active' to alter the css of our button to change when the user is actively clicking. (We can also use ':visited', 
 ':focus', ':hover') */
-.card-three:active {
+.input-box .card-three:active {
   background-color: rgb(15, 130, 120);
 }
 

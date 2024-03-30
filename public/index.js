@@ -15,6 +15,7 @@ navbarToggle.addEventListener("click", () => {
 
 const cartMenu = document.querySelector(".cart-options");
 const cartToggle = document.querySelector(".mobile-cart-toggle");
+const cartMenuClose = document.querySelector(".cart-close");
 
 cartToggle.addEventListener("click", () => {
     const visibility = cartMenu.getAttribute("data-visible");
@@ -25,4 +26,8 @@ cartToggle.addEventListener("click", () => {
         cartMenu.setAttribute("data-visible", false);
         cartToggle.setAttribute("aria-expanded", false);
     }
+});
+cartMenuClose.addEventListener("click", () => {
+    cartMenu.setAttribute("data-visible", false);
+    cartToggle.setAttribute("aria-expanded", false);
 });
