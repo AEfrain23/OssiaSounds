@@ -33,6 +33,7 @@ body {
 /* -------------------- NAVBAR -------------------- */
 
 header {
+  z-index: 0;
   width: 100%;
   background-color: black;
   color: white;
@@ -48,6 +49,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.navbar-color {
+  z-index: -99;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  height: 96px;
+  background-color: black;
+  border-bottom: 0.5px solid rgb(100, 100, 100);
 }
 
 .brand-container {
@@ -88,6 +100,32 @@ header {
   gap: 3rem;
 }
 
+.cart-options {
+  z-index: -999;
+  /* background-image: linear-gradient(black, rgb(50, 50, 50)); */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 5%;
+  top: 116px;
+  position: fixed;
+  width: 90%;
+  margin: auto;
+  transform: translateY(-120%);
+  transition: ease-in 300ms;
+}
+
+.cart-options div {
+  color: black;
+  padding: 1rem;
+}
+
+.cart-options[data-visible="true"] {
+  transform: translateY(0%);
+}
+
+
 
 @media (max-width: 1200px) {
   .navbar-container {
@@ -127,6 +165,10 @@ header {
     color: white;
     overflow-x: hidden;
     font-family: Proxima-Nova;
+  }
+
+  .navbar-color {
+    height: 64px;
   }
 
   .navbar-container {
@@ -193,6 +235,11 @@ header {
     display: flex;
     flex-direction: row-reverse;
     gap: 1rem;
+  }
+
+  .cart-options {
+    z-index: -9999;
+    top: 84px;
   }
 
 }
