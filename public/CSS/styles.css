@@ -59,7 +59,7 @@ header {
   width: 100%;
   height: 96px;
   background-color: black;
-  border-bottom: 0.5px solid rgb(100, 100, 100);
+  /* border-bottom: 0.5px solid rgb(100, 100, 100); */
 }
 
 .brand-container {
