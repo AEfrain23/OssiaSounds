@@ -38,13 +38,17 @@
               <span class="cart-close">Close</span>
             </span>
           </div>
-          <div class="card-two">Items</div>
+          <div class="card-two">
+            <% if (locals.commonItem) { %>
+            <div class="merch-item"> 2x <%=commonItem%> <%= commonItem %></div>
+            <% } %>
+          </div>
           <div class="card-three">
             <span>Total</span>
             <span>£25</span>
           </div>
           <div class="card-four">
-            <button>Checkout</button>
+            <button class="checkout-button">Checkout</button>
           </div>
         </div>
         <div class="menu-options" data-visible="false">
