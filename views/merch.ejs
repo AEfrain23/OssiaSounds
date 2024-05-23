@@ -8,21 +8,15 @@
           heads when you wear our unique abstract designs. Free shipping within the UK.</p>
       </div>
       <div class="tshirts-hoodies">
-        <div class="card">
-          <img src="Images/merch images/OS002 T-shirt Back.jpg" class="card-image"></img>
-          <div class="card-info"><strong>OS003 T-shirt</strong> - £25</div>
+        <% if (locals.commonItem) { %>
+          <% commonItem.forEach(item=> { %>
+        <div class="card item-<%-item.itemNumber%>">
+          <img src="Images/merch images/OS00<%-item.itemNumber%> T-shirt Back.jpg" class="card-image"></img>
+          <div class="card-info"><strong>OS00<%-item.itemNumber%> T-shirt</strong> - £25</div>
           <div class="basket-button">Add to basket</div>
         </div>
-        <div class="card">
-          <img src="Images/merch images/OS002 T-shirt Back.jpg" class="card-image"></img>
-          <div class="card-info"><strong>OS002 T-shirt</strong> - £25</div>
-          <div class="basket-button">Add to basket</div>
-        </div>
-        <div class="card">
-          <img src="Images/merch images/OS001 T-shirt Back.jpg" class="card-image"></img>
-          <div class="card-info"><strong>OS001 T-shirt</strong> - £25</div>
-          <div class="basket-button">Add to basket</div>
-        </div>
+        <% }); %>
+        <% } %>
       </div>
     </div>
   </div>

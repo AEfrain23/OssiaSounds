@@ -39,9 +39,27 @@
             </span>
           </div>
           <div class="card-two">
+            <div class="basket-message" style="display: none;">
+              <h2>Your basket is empty.</h2>
+            </div>
             <% if (locals.commonItem) { %>
-            <div class="merch-item"> 2x <%=commonItem%> <%= commonItem %></div>
-            <% } %>
+              <% commonItem.forEach(item=> { %>
+                <div class="cart-item item-<%-item.itemNumber%>" data-visible="true">
+                  <div>
+                    <%= item.name %>
+                  </div>
+                  <div class="total-per-item">
+                    <div class="item-quantity">
+                      <button class="subtract-button">-</button>
+                      <div class="quantity">1</div>
+                      <button class="add-button">+</button>
+                    </div>
+                    <div>£<%= (item.price)/100 %>
+                    </div>
+                  </div>
+                </div>
+                <% }); %>
+                  <% } %>
           </div>
           <div class="card-three">
             <span>Total</span>

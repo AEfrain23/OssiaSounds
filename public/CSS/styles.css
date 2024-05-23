@@ -142,10 +142,45 @@ header {
 }
 
 .cart-options .card-two {
-  padding: 2rem 0;
+  padding: 1rem 0;
   border-top: solid black 1px;
   border-bottom: solid black 1px;
 }
+
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.cart-item[data-visible="false"] {
+  display: none;
+}
+
+.item-quantity {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.item-quantity button {
+  background-color: black;
+  color: white;
+  border: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.total-per-item {
+  display: flex;
+  align-items: center;
+  gap: 15%;
+}
+
 
 .cart-options .card-three {
   display: flex;
@@ -159,7 +194,7 @@ header {
   justify-content: end;
 }
 
-.cart-options button {
+.cart-options .checkout-button {
   background-color: black;
   color: white;
   border: 0;
