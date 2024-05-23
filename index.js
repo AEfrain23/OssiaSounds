@@ -105,7 +105,7 @@ app.post("/create-checkout-session", async (req, res) => {
         allowed_countries: ['GB']
       },
       success_url: `${process.env.SERVER_URL}/success`,
-      cancel_url: `${process.env.SERVER_URL}/cancel`
+      cancel_url: `${process.env.SERVER_URL}/`
     })
     res.json({ url: session.url });
   } catch (e) {

@@ -90,6 +90,11 @@ document.querySelectorAll('.cart-item').forEach(cartItem => {
         let count = Number(quantityElement.innerHTML);
         const addition = count + 1;
         quantityElement.innerHTML = addition;
+
+        // Adding individual item totals
+        let itemPrice = cartItem.querySelector(".item-price");
+        itemPrice.innerHTML = 25 * addition;
+
         updateVisibility(cartItem, addition);
         updateBasketMessage(); // Update basket message after changing quantity
     });
@@ -99,6 +104,11 @@ document.querySelectorAll('.cart-item').forEach(cartItem => {
         const subtraction = count - 1;
         const newQuantity = subtraction < 0 ? 0 : subtraction;
         quantityElement.innerHTML = newQuantity;
+
+        // Adding individual item totals
+        let itemPrice = cartItem.querySelector(".item-price");
+        itemPrice.innerHTML = 25 * newQuantity;
+
         updateVisibility(cartItem, newQuantity);
         updateBasketMessage(); // Update basket message after changing quantity
     });
@@ -117,16 +127,23 @@ updateBasketMessage();
 
 
 
+
 // ADDING TO CART FROM MERCH PAGE
 // Item 1
+
 const addItem1 = document.querySelector(".tshirts-hoodies .item-1 .basket-button")
 const cartItem1 = document.querySelector(".cart-options .item-1 .quantity")
 const item1Visibility = document.querySelector(".cart-options .item-1")
 addItem1.addEventListener("click", () => {
     console.log("Item 1 added");
     let count = Number(cartItem1.innerHTML);
-    const addition = count + 1;
+    let addition = count + 1;
     cartItem1.innerHTML = addition;
+
+    let itemPrice = document.querySelectorAll(".item-price")[0];
+    console.log(itemPrice.innerHTML);
+    itemPrice.innerHTML = 25 * addition;
+
     updateVisibility(item1Visibility, addition);
     updateBasketMessage(); // Update basket message after changing quantity
 })
@@ -140,11 +157,17 @@ addItem2.addEventListener("click", () => {
     let count = Number(cartItem2.innerHTML);
     const addition = count + 1;
     cartItem2.innerHTML = addition;
+
+    let itemPrice = document.querySelectorAll(".item-price")[1];
+    console.log(itemPrice.innerHTML);
+    itemPrice.innerHTML = 25 * addition;
+
+
     updateVisibility(item2Visibility, addition);
     updateBasketMessage(); // Update basket message after changing quantity
 })
 
-// Item 2
+// Item 3
 const addItem3 = document.querySelector(".tshirts-hoodies .item-3 .basket-button")
 const cartItem3 = document.querySelector(".cart-options .item-3 .quantity")
 const item3Visibility = document.querySelector(".cart-options .item-3")
@@ -153,7 +176,14 @@ addItem3.addEventListener("click", () => {
     let count = Number(cartItem3.innerHTML);
     const addition = count + 1;
     cartItem3.innerHTML = addition;
+
+    let itemPrice = document.querySelectorAll(".item-price")[2];
+    console.log(itemPrice.innerHTML);
+    itemPrice.innerHTML = 25 * addition;
+
     updateVisibility(item3Visibility, addition);
     updateBasketMessage(); // Update basket message after changing quantity
 })
+
+
 
