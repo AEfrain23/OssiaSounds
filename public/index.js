@@ -50,9 +50,9 @@ checkoutButton.addEventListener("click", () => {
         },
         body: JSON.stringify({
             items: [
-                { id: "664f132b1d4f0327efc1fd0e", quantity: item1Quantity.innerHTML },
-                { id: "664f132b1d4f0327efc1fd0f", quantity: item2Quantity.innerHTML },
-                { id: "664f132b1d4f0327efc1fd10", quantity: item3Quantity.innerHTML },
+                { id: "664f8cb764e57679f37d6c56", quantity: item1Quantity.innerHTML },
+                { id: "664f8cb764e57679f37d6c57", quantity: item2Quantity.innerHTML },
+                { id: "664f8cd46eeddf33f3aeb85e", quantity: item3Quantity.innerHTML },
             ]
         })
     }).then(res => {
