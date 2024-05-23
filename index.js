@@ -9,7 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_API_KEY);
 
 
 const app = express();
-const port = 3000;
+const port = 3004;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
