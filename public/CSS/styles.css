@@ -119,6 +119,7 @@ header {
 
 .cart-options[data-visible="true"] {
   transform: translateY(0%);
+  transform: translateZ(0);
 }
 
 .cart-options>div {
@@ -161,8 +162,12 @@ header {
 
 .item-quantity {
   display: flex;
-  gap: 0.5rem;
   align-items: center;
+}
+
+.quantity {
+width: 1.5rem;
+text-align: center;
 }
 
 .item-quantity button {
@@ -178,7 +183,8 @@ header {
 .total-per-item {
   display: flex;
   align-items: center;
-  gap: 15%;
+  width: 7rem;
+  justify-content: space-between;
 }
 
 
