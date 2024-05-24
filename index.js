@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import Stripe from 'stripe';
 
 
-mongoose.connect("mongodb+srv://aefrain23:Efrain230196@todolist-app.r6dzlxb.mongodb.net/MerchDB");
+mongoose.connect(`${process.env.MONGO_DB}`);
 
 
 const stripe = new Stripe(process.env.STRIPE_API_KEY);
