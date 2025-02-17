@@ -47,10 +47,29 @@
           </div>
           <div class="card-two">
             <div class="basket-message" style="display: none;">
-              <h3>Your basket is empty. Add OSSIA merch to your cart via our merch page.</h3>
-              <!-- <h3 style="color: red;">Merchandise store coming soon!</h3> -->
+              <!-- <h3>Your basket is empty. Add OSSIA merch to your cart via our merch page.</h3> -->
+              <h3 style="color: red;">Merchandise store coming soon!</h3>
             </div>
-
+            <% if (locals.commonItem) { %>
+              <% commonItem.forEach(item=> { %>
+                <div class="cart-item item-<%-item.itemNumber%>" data-visible="false">
+                  <div>
+                    <%= item.name %>
+                  </div>
+                  <div class="total-per-item">
+                    <div class="item-quantity">
+                      <button class="subtract-button">-</button>
+                      <div class="quantity">0</div>
+                      <button class="add-button">+</button>
+                    </div>
+                    <div class="flex">
+                      <div>£</div>
+                      <div class="item-price"></div>
+                    </div>
+                  </div>
+                </div>
+                <% }); %>
+                  <% } %>
           </div>
           <div class="card-three">
             <span>Total</span>
