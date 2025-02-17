@@ -9,6 +9,10 @@
 .card {
   display: flex;
   flex-direction: column;
+
+    /* The code below disables ankar tag styling. */
+    text-decoration: none;
+    color: inherit;
 }
 
 .card-tag {
@@ -30,6 +34,8 @@
   margin-top: 0.25rem;
   font-weight: 400;
 }
+
+
 
 @media (max-width: 768px) {
   .events-grid {

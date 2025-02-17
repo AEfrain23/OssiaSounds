@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import 'dotenv/config'
 import mongoose from "mongoose";
 import Stripe from 'stripe';
+import nodemailer from 'nodemailer';
 
 
 mongoose.connect(`${process.env.MONGO_DB}`);
@@ -66,7 +67,6 @@ function getItems() {
 // STRIPE FUNCTIONALITY:
 app.post("/create-checkout-session", async (req, res) => {
   try {
-
     const { items } = req.body;
 
     const validItems = items.filter(item => item.quantity > 0);
@@ -142,6 +142,79 @@ app.get("/about", (req, res) => {
 
 app.get("/contact", (req, res) => {
   res.render("contact.ejs");
+});
+
+
+
+// Route to handle form submission and reCAPTCHA validation
+app.post("/send-message", (req, res) => {
+  const { firstName, secondName, customerEmail, customerMessage, 'g-recaptcha-response': captchaResponse } = req.body;
+
+  // Step 1: Verify reCAPTCHA response with Google
+  const secretKey = process.env.RECAPTCHA_KEY;  // Store this in your .env file
+
+  const params = new URLSearchParams({
+    secret: secretKey,
+    response: captchaResponse,
+    remoteip: req.ip,
+  });
+
+  fetch('https://www.google.com/recaptcha/api/siteverify', {
+    method: 'POST',
+    body: params,
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Step 2: If reCAPTCHA validation is successful, send the email
+      if (data.success) {
+        console.log("Successful reCAPTCHA validation");
+
+        let transporter = nodemailer.createTransport({
+          host: 'smtp-relay.sendinblue.com',
+          port: 587,
+          auth: {
+            user: "angelefrain23@gmail.com",  // Your email
+            pass: process.env.SMTP_KEY,   // Your SMTP key
+          },
+        });
+
+        const message = {
+          from: customerEmail,
+          to: "support@ossiasounds.com",
+          subject: `ossiasounds.com - ${firstName} ${secondName}`,
+          text: `Customer Name: ${firstName} ${secondName}\nCustomer Message: ${customerMessage}`,  // Use newlines for clarity
+        };
+
+        // Send the email using Nodemailer
+        transporter.sendMail(message, (err, info) => {
+          if (err) {
+            console.log(err);
+            res.status(500).json({ message: "Error sending email" });
+          } else {
+            console.log(info);
+            const emailSent = "Email sent successfully";
+            const textResponse = "Thank you for you message.";
+            // Step 3: Render the confirmation page with a success message
+            res.render("contact.ejs", { confirmation: emailSent, message: textResponse });  // Render the EJS page with the confirmation message
+            // IMPORTAT: For some reason the following extra code in contact.ejs makes the whole pop up message non-functional.
+            //          <% if (locals.message) { %>
+            //          <p style="color: white;"><%- message %></p>
+            //          <% } %>
+          }
+        });
+
+      } else {
+        // If reCAPTCHA failed, render the contact page with an error message
+        const errorMessage = "reCAPTCHA validation failed";
+        const textResponse = "Please try again.";
+        console.log("reCAPTCHA validation failed.");
+        res.render("contact.ejs", { confirmation: errorMessage, message: textResponse });
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ message: "Error validating reCAPTCHA" });
+    });
 });
 
 

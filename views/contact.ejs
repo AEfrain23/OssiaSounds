@@ -27,11 +27,23 @@
             <textarea class="item four" type="text" rows="10" name="customerMessage" id="customerMessage" required></textarea>
           </div>
         </div>
+        <div class="g-recaptcha" data-sitekey="6LcwvtkqAAAAANRiNOdjt898TQZpKP7_L0H4gJ64"></div>
         <div class="item five">
           <button type="submit" class="send-button">SEND</button>
         </div>
       </form>
     </div>
-  </div>
+
+      <!-- Confirmation Container to display message after submission -->
+  <% if (locals.confirmation) { %>
+    <div class="confirmation-container" style="visibility: visible;">
+      <div class="confirmation-box">
+        <p class="confirmation-message"><%- confirmation %></p>
+      </div>
+    </div>
+  <% } %>
+  
+  <!-- </div> -->
+  <!-- Continuing to footer for "subscribe-section" -->
 
   <%- include("partials/footer") %>

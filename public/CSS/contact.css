@@ -53,9 +53,14 @@
   margin: 1rem 0 0.5rem 0;
 }
 
+.g-recaptcha {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 0.5rem 0;
+}
 
 .contact-page button {
-  margin: 1rem;
+  margin: 1rem 0 0.5rem 0;
   padding: 0.35rem 0.5rem;
   background-color: transparent;
   color: white;
@@ -65,8 +70,7 @@
 
 
 .contact-page button:hover {
-  margin: 1rem;
-  padding: 0.5rem;
+  margin: 1rem 0 0.5rem 0;
   background-color: white;
   color: black;
   font-size: 1rem;
@@ -74,10 +78,50 @@
 }
 
 .contact-page button:press {
-  margin: 1rem;
-  padding: 0.5rem;
+  margin: 1rem 0 0.5rem 0;
   background-color: white;
   color: black;
   font-size: 1rem;
   border: solid white 2.5px;
+}
+
+/* ---------- EMAIL CONFIRMATION MESSAGE ---------- */
+
+.confirmation-container[visibility="false"] {
+  visibility: hidden;
+}
+
+
+.confirmation-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.confirmation-box {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 10rem;
+  gap: 0.5rem;
+}
+
+.confirmation-box p {
+  width: 90%;
+  text-align: center;
+  margin: 0;
+}
+
+.confirmation-message {
+  color: white;
+  font-size: 1.25rem;
 }

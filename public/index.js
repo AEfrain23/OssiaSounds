@@ -1,3 +1,5 @@
+// -------------------------------------------------- NAVBAR FUNCTIONALITY --------------------------------------------------
+
 document.addEventListener('DOMContentLoaded', () => {
 
 const navbarMenu = document.querySelector(".menu-options");
@@ -35,8 +37,20 @@ cartMenuClose.addEventListener("click", () => {
 });
 
 
+// ----------------------------------------------- CONTACT FORM FUNCTIONALITY -----------------------------------------------
+// COTACT FORM SENT - Here we are reloading the page 5s after the send button has been pressed.
 
-// STRIPE FUNCTIONALITY:
+const confirmationWindow = document.querySelector(".confirmation-container");
+const visibility = confirmationWindow.getAttribute("style");
+
+if (visibility === "visibility: visible;") {
+    setTimeout(function () {
+        window.location = "http://www.ossiasounds.com";
+    }, 5000);
+}
+
+
+// -------------------------------------------------- STIPE FUNCTIONALITY --------------------------------------------------
 
 const checkoutButton = document.querySelector(".checkout-button")
 
@@ -133,59 +147,61 @@ updateBasketMessage();
 // ADDING TO CART FROM MERCH PAGE
 // Item 1
 
-const addItem1 = document.querySelector(".tshirts-hoodies .item-1 .basket-button")
-const cartItem1 = document.querySelector(".cart-options .item-1 .quantity")
-const item1Visibility = document.querySelector(".cart-options .item-1")
-addItem1.addEventListener("click", () => {
-    console.log("Item 1 added");
-    let count = Number(cartItem1.innerHTML);
-    let addition = count + 1;
-    cartItem1.innerHTML = addition;
+// UNRESTRICT CODE BELLOW WHEN MERCH STORE IS READY.
 
-    let itemPrice = document.querySelectorAll(".item-price")[0];
-    console.log(itemPrice.innerHTML);
-    itemPrice.innerHTML = 25 * addition;
+// const addItem1 = document.querySelector(".tshirts-hoodies .item-1 .basket-button")
+// const cartItem1 = document.querySelector(".cart-options .item-1 .quantity")
+// const item1Visibility = document.querySelector(".cart-options .item-1")
+// addItem1.addEventListener("click", () => {
+//     console.log("Item 1 added");
+//     let count = Number(cartItem1.innerHTML);
+//     let addition = count + 1;
+//     cartItem1.innerHTML = addition;
 
-    updateVisibility(item1Visibility, addition);
-    updateBasketMessage(); // Update basket message after changing quantity
-})
+//     let itemPrice = document.querySelectorAll(".item-price")[0];
+//     console.log(itemPrice.innerHTML);
+//     itemPrice.innerHTML = 25 * addition;
 
-// Item 2
-const addItem2 = document.querySelector(".tshirts-hoodies .item-2 .basket-button")
-const cartItem2 = document.querySelector(".cart-options .item-2 .quantity")
-const item2Visibility = document.querySelector(".cart-options .item-2")
-addItem2.addEventListener("click", () => {
-    console.log("Item 2 added");
-    let count = Number(cartItem2.innerHTML);
-    const addition = count + 1;
-    cartItem2.innerHTML = addition;
+//     updateVisibility(item1Visibility, addition);
+//     updateBasketMessage(); // Update basket message after changing quantity
+// })
 
-    let itemPrice = document.querySelectorAll(".item-price")[1];
-    console.log(itemPrice.innerHTML);
-    itemPrice.innerHTML = 25 * addition;
+// // Item 2
+// const addItem2 = document.querySelector(".tshirts-hoodies .item-2 .basket-button")
+// const cartItem2 = document.querySelector(".cart-options .item-2 .quantity")
+// const item2Visibility = document.querySelector(".cart-options .item-2")
+// addItem2.addEventListener("click", () => {
+//     console.log("Item 2 added");
+//     let count = Number(cartItem2.innerHTML);
+//     const addition = count + 1;
+//     cartItem2.innerHTML = addition;
+
+//     let itemPrice = document.querySelectorAll(".item-price")[1];
+//     console.log(itemPrice.innerHTML);
+//     itemPrice.innerHTML = 25 * addition;
 
 
-    updateVisibility(item2Visibility, addition);
-    updateBasketMessage(); // Update basket message after changing quantity
-})
+//     updateVisibility(item2Visibility, addition);
+//     updateBasketMessage(); // Update basket message after changing quantity
+// })
 
-// Item 3
-const addItem3 = document.querySelector(".tshirts-hoodies .item-3 .basket-button")
-const cartItem3 = document.querySelector(".cart-options .item-3 .quantity")
-const item3Visibility = document.querySelector(".cart-options .item-3")
-addItem3.addEventListener("click", () => {
-    console.log("Item 3 added");
-    let count = Number(cartItem3.innerHTML);
-    const addition = count + 1;
-    cartItem3.innerHTML = addition;
+// // Item 3
+// const addItem3 = document.querySelector(".tshirts-hoodies .item-3 .basket-button")
+// const cartItem3 = document.querySelector(".cart-options .item-3 .quantity")
+// const item3Visibility = document.querySelector(".cart-options .item-3")
+// addItem3.addEventListener("click", () => {
+//     console.log("Item 3 added");
+//     let count = Number(cartItem3.innerHTML);
+//     const addition = count + 1;
+//     cartItem3.innerHTML = addition;
 
-    let itemPrice = document.querySelectorAll(".item-price")[2];
-    console.log(itemPrice.innerHTML);
-    itemPrice.innerHTML = 25 * addition;
+//     let itemPrice = document.querySelectorAll(".item-price")[2];
+//     console.log(itemPrice.innerHTML);
+//     itemPrice.innerHTML = 25 * addition;
 
-    updateVisibility(item3Visibility, addition);
-    updateBasketMessage(); // Update basket message after changing quantity
-})
+//     updateVisibility(item3Visibility, addition);
+//     updateBasketMessage(); // Update basket message after changing quantity
+// })
 
 
 

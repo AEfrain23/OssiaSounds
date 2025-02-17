@@ -19,6 +19,8 @@
     "lodash": "^4.17.21",
     "mongodb": "^6.6.2",
     "mongoose": "^8.4.0",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.10.0",
     "stripe": "^15.7.0"
   }
 }

@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="/CSS/merch.css">
   <link rel="stylesheet" href="/CSS/events.css">
   <link rel="stylesheet" href="/CSS/contact.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <title>Ossia Sounds</title>
 </head>
 
@@ -46,7 +47,8 @@
           </div>
           <div class="card-two">
             <div class="basket-message" style="display: none;">
-              <h3>Your basket is empty. Add OSSIA merch to your cart via our merch page.</h3>
+              <!-- <h3>Your basket is empty. Add OSSIA merch to your cart via our merch page.</h3> -->
+              <h3 style="color: red;">Merchandise store coming soon!</h3>
             </div>
             <% if (locals.commonItem) { %>
               <% commonItem.forEach(item=> { %>
@@ -71,7 +73,7 @@
           </div>
           <div class="card-three">
             <span>Total</span>
-            <span>£25</span>
+            <span>£0</span>
           </div>
           <div class="card-four">
             <button class="checkout-button">Checkout</button>
