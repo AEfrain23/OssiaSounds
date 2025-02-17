@@ -81,127 +81,127 @@ checkoutButton.addEventListener("click", () => {
     })
 });
 
-
-
-// Update visibility of basket message
-function updateBasketMessage() {
-    const basketMessage = document.querySelector('.basket-message');
-    const cardTwo = document.querySelector('.card-two');
-    const validItems = Array.from(cardTwo.querySelectorAll('.cart-item')).filter(cartItem => cartItem.dataset.visible === 'true');
-
-    if (validItems.length === 0) {
-        basketMessage.style.display = 'block'; // Show the message
-    } else {
-        basketMessage.style.display = 'none'; // Hide the message
-    }
-}
-
-// ITEM FUNCTIONALITY and VISIBILITY
-document.querySelectorAll('.cart-item').forEach(cartItem => {
-    const addButton = cartItem.querySelector('.add-button');
-    const subtractButton = cartItem.querySelector('.subtract-button');
-    const quantityElement = cartItem.querySelector('.quantity');
-
-    addButton.addEventListener('click', () => {
-        let count = Number(quantityElement.innerHTML);
-        const addition = count + 1;
-        quantityElement.innerHTML = addition;
-
-        // Adding individual item totals
-        let itemPrice = cartItem.querySelector(".item-price");
-        itemPrice.innerHTML = 25 * addition;
-
-        updateVisibility(cartItem, addition);
-        updateBasketMessage(); // Update basket message after changing quantity
-    });
-
-    subtractButton.addEventListener('click', () => {
-        let count = Number(quantityElement.innerHTML);
-        const subtraction = count - 1;
-        const newQuantity = subtraction < 0 ? 0 : subtraction;
-        quantityElement.innerHTML = newQuantity;
-
-        // Adding individual item totals
-        let itemPrice = cartItem.querySelector(".item-price");
-        itemPrice.innerHTML = 25 * newQuantity;
-
-        updateVisibility(cartItem, newQuantity);
-        updateBasketMessage(); // Update basket message after changing quantity
-    });
-});
-
-function updateVisibility(cartItem, quantity) {
-    if (quantity === 0) {
-        cartItem.setAttribute('data-visible', 'false');
-    } else {
-        cartItem.setAttribute('data-visible', 'true');
-    }
-}
-
-// Call updateBasketMessage initially to set the initial state of the message
-updateBasketMessage();
-
-
-
-
-// ADDING TO CART FROM MERCH PAGE
-// Item 1
-
 // UNRESTRICT CODE BELLOW WHEN MERCH STORE IS READY.
 
-const addItem1 = document.querySelector(".tshirts-hoodies .item-1 .basket-button")
-const cartItem1 = document.querySelector(".cart-options .item-1 .quantity")
-const item1Visibility = document.querySelector(".cart-options .item-1")
-addItem1.addEventListener("click", () => {
-    console.log("Item 1 added");
-    let count = Number(cartItem1.innerHTML);
-    let addition = count + 1;
-    cartItem1.innerHTML = addition;
-
-    let itemPrice = document.querySelectorAll(".item-price")[0];
-    console.log(itemPrice.innerHTML);
-    itemPrice.innerHTML = 25 * addition;
-
-    updateVisibility(item1Visibility, addition);
-    updateBasketMessage(); // Update basket message after changing quantity
-})
-
-// Item 2
-const addItem2 = document.querySelector(".tshirts-hoodies .item-2 .basket-button")
-const cartItem2 = document.querySelector(".cart-options .item-2 .quantity")
-const item2Visibility = document.querySelector(".cart-options .item-2")
-addItem2.addEventListener("click", () => {
-    console.log("Item 2 added");
-    let count = Number(cartItem2.innerHTML);
-    const addition = count + 1;
-    cartItem2.innerHTML = addition;
-
-    let itemPrice = document.querySelectorAll(".item-price")[1];
-    console.log(itemPrice.innerHTML);
-    itemPrice.innerHTML = 25 * addition;
 
 
-    updateVisibility(item2Visibility, addition);
-    updateBasketMessage(); // Update basket message after changing quantity
-})
+// // Update visibility of basket message
+// function updateBasketMessage() {
+//     const basketMessage = document.querySelector('.basket-message');
+//     const cardTwo = document.querySelector('.card-two');
+//     const validItems = Array.from(cardTwo.querySelectorAll('.cart-item')).filter(cartItem => cartItem.dataset.visible === 'true');
 
-// Item 3
-const addItem3 = document.querySelector(".tshirts-hoodies .item-3 .basket-button")
-const cartItem3 = document.querySelector(".cart-options .item-3 .quantity")
-const item3Visibility = document.querySelector(".cart-options .item-3")
-addItem3.addEventListener("click", () => {
-    console.log("Item 3 added");
-    let count = Number(cartItem3.innerHTML);
-    const addition = count + 1;
-    cartItem3.innerHTML = addition;
+//     if (validItems.length === 0) {
+//         basketMessage.style.display = 'block'; // Show the message
+//     } else {
+//         basketMessage.style.display = 'none'; // Hide the message
+//     }
+// }
 
-    let itemPrice = document.querySelectorAll(".item-price")[2];
-    console.log(itemPrice.innerHTML);
-    itemPrice.innerHTML = 25 * addition;
+// // ITEM FUNCTIONALITY and VISIBILITY
+// document.querySelectorAll('.cart-item').forEach(cartItem => {
+//     const addButton = cartItem.querySelector('.add-button');
+//     const subtractButton = cartItem.querySelector('.subtract-button');
+//     const quantityElement = cartItem.querySelector('.quantity');
 
-    updateVisibility(item3Visibility, addition);
-    updateBasketMessage(); // Update basket message after changing quantity
-})
+//     addButton.addEventListener('click', () => {
+//         let count = Number(quantityElement.innerHTML);
+//         const addition = count + 1;
+//         quantityElement.innerHTML = addition;
+
+//         // Adding individual item totals
+//         let itemPrice = cartItem.querySelector(".item-price");
+//         itemPrice.innerHTML = 25 * addition;
+
+//         updateVisibility(cartItem, addition);
+//         updateBasketMessage(); // Update basket message after changing quantity
+//     });
+
+//     subtractButton.addEventListener('click', () => {
+//         let count = Number(quantityElement.innerHTML);
+//         const subtraction = count - 1;
+//         const newQuantity = subtraction < 0 ? 0 : subtraction;
+//         quantityElement.innerHTML = newQuantity;
+
+//         // Adding individual item totals
+//         let itemPrice = cartItem.querySelector(".item-price");
+//         itemPrice.innerHTML = 25 * newQuantity;
+
+//         updateVisibility(cartItem, newQuantity);
+//         updateBasketMessage(); // Update basket message after changing quantity
+//     });
+// });
+
+// function updateVisibility(cartItem, quantity) {
+//     if (quantity === 0) {
+//         cartItem.setAttribute('data-visible', 'false');
+//     } else {
+//         cartItem.setAttribute('data-visible', 'true');
+//     }
+// }
+
+// // Call updateBasketMessage initially to set the initial state of the message
+// updateBasketMessage();
+
+
+
+
+// // ADDING TO CART FROM MERCH PAGE
+// // Item 1
+
+// const addItem1 = document.querySelector(".tshirts-hoodies .item-1 .basket-button")
+// const cartItem1 = document.querySelector(".cart-options .item-1 .quantity")
+// const item1Visibility = document.querySelector(".cart-options .item-1")
+// addItem1.addEventListener("click", () => {
+//     console.log("Item 1 added");
+//     let count = Number(cartItem1.innerHTML);
+//     let addition = count + 1;
+//     cartItem1.innerHTML = addition;
+
+//     let itemPrice = document.querySelectorAll(".item-price")[0];
+//     console.log(itemPrice.innerHTML);
+//     itemPrice.innerHTML = 25 * addition;
+
+//     updateVisibility(item1Visibility, addition);
+//     updateBasketMessage(); // Update basket message after changing quantity
+// })
+
+// // Item 2
+// const addItem2 = document.querySelector(".tshirts-hoodies .item-2 .basket-button")
+// const cartItem2 = document.querySelector(".cart-options .item-2 .quantity")
+// const item2Visibility = document.querySelector(".cart-options .item-2")
+// addItem2.addEventListener("click", () => {
+//     console.log("Item 2 added");
+//     let count = Number(cartItem2.innerHTML);
+//     const addition = count + 1;
+//     cartItem2.innerHTML = addition;
+
+//     let itemPrice = document.querySelectorAll(".item-price")[1];
+//     console.log(itemPrice.innerHTML);
+//     itemPrice.innerHTML = 25 * addition;
+
+
+//     updateVisibility(item2Visibility, addition);
+//     updateBasketMessage(); // Update basket message after changing quantity
+// })
+
+// // Item 3
+// const addItem3 = document.querySelector(".tshirts-hoodies .item-3 .basket-button")
+// const cartItem3 = document.querySelector(".cart-options .item-3 .quantity")
+// const item3Visibility = document.querySelector(".cart-options .item-3")
+// addItem3.addEventListener("click", () => {
+//     console.log("Item 3 added");
+//     let count = Number(cartItem3.innerHTML);
+//     const addition = count + 1;
+//     cartItem3.innerHTML = addition;
+
+//     let itemPrice = document.querySelectorAll(".item-price")[2];
+//     console.log(itemPrice.innerHTML);
+//     itemPrice.innerHTML = 25 * addition;
+
+//     updateVisibility(item3Visibility, addition);
+//     updateBasketMessage(); // Update basket message after changing quantity
+// })
 
 
 
