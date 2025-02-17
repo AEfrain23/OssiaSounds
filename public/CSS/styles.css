@@ -494,10 +494,9 @@ footer {
   height: 1rem;
 }
 
-.footer-content>p {
+.footer-content p {
   font-size: 0.75rem;
   margin: 0;
-
   /* The code below disables mobile phone linking on safari */
   pointer-events: none;
   text-decoration: none;
