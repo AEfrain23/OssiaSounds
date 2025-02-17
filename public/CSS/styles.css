@@ -500,7 +500,6 @@ footer {
   /* The code below disables mobile phone linking on safari */
   color: inherit !important;
   text-decoration: none !important;
-  pointer-events: none;
   cursor: default;
 
 }
