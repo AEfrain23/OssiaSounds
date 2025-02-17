@@ -1,5 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
+import cors from 'cors';  // Importing CORS middleware
+import fetch from 'node-fetch';  // node-fetch v2 // For sending requests to reCAPTCHA API
 import 'dotenv/config'
 import mongoose from "mongoose";
 import Stripe from 'stripe';
