@@ -486,11 +486,6 @@ footer {
   margin: 2rem auto;
   width: 60rem;
   height: 5rem;
-
-  /* The code below disables mobile phone linking on safari */
-  color: white !important;
-  text-decoration: none !important;
-  cursor: default;
 }
 
 .footer-content>.socials {
@@ -503,11 +498,6 @@ footer {
 .footer-content p {
   font-size: 0.75rem;
   margin: 0;
-  /* The code below disables mobile phone linking on safari */
-  color: white !important;
-  text-decoration: none !important;
-  cursor: default;
-
 }
 
 
