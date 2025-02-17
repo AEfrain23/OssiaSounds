@@ -475,6 +475,7 @@ footer {
 }
 
 .footer-content {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -485,6 +486,11 @@ footer {
   margin: 2rem auto;
   width: 60rem;
   height: 5rem;
+
+    /* The code below disables mobile phone linking on safari */
+    color: white !important;
+    text-decoration: none !important;
+    cursor: default;
 }
 
 .footer-content>.socials {
