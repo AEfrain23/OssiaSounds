@@ -487,10 +487,10 @@ footer {
   width: 60rem;
   height: 5rem;
 
-    /* The code below disables mobile phone linking on safari */
-    color: white !important;
-    text-decoration: none !important;
-    cursor: default;
+  /* The code below disables mobile phone linking on safari */
+  color: white !important;
+  text-decoration: none !important;
+  cursor: default;
 }
 
 .footer-content>.socials {
@@ -504,7 +504,7 @@ footer {
   font-size: 0.75rem;
   margin: 0;
   /* The code below disables mobile phone linking on safari */
-  color: inherit !important;
+  color: white !important;
   text-decoration: none !important;
   cursor: default;
 
