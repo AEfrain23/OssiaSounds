@@ -22,6 +22,8 @@ const cartToggle = document.querySelector(".mobile-cart-toggle");
 const cartMenuClose = document.querySelector(".cart-close");
 
 cartToggle.addEventListener("click", () => {
+    console.log("clicked");
+    
     const visibility = cartMenu.getAttribute("data-visible");
     if (visibility === "false") {
         cartMenu.setAttribute("data-visible", true);

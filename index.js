@@ -66,7 +66,7 @@ function getItems() {
 
 
 
-// STRIPE FUNCTIONALITY:
+// ---------- STRIPE FUNCTIONALITY ----------:
 app.post("/create-checkout-session", async (req, res) => {
   try {
     const { items } = req.body;
@@ -126,6 +126,8 @@ app.use(async (req, res, next) => {
 });
 
 
+// ---------- ENDPOINT ROUTES ----------:
+
 app.get("/", (req, res) => {
   res.render("index.ejs")
 });
@@ -147,6 +149,8 @@ app.get("/contact", (req, res) => {
 });
 
 
+
+// ---------- reCAPTCHA FUNCTIONALITY ----------:
 
 // Route to handle form submission and reCAPTCHA validation
 app.post("/send-message", (req, res) => {
