@@ -30,39 +30,28 @@ const merchSchema = new mongoose.Schema({
 
 const Merch = mongoose.model("Merch", merchSchema);
 
-const item1 = new Merch({
-  itemNumber: 1,
-  name: "OS001 T-Shirt",
-  price: 2500
-});
-const item2 = new Merch({
-  itemNumber: 2,
-  name: "OS002 T-Shirt",
-  price: 2500
-});
-const item3 = new Merch({
-  itemNumber: 3,
-  name: "OS003 T-Shirt",
-  price: 2500
-});
+const defaultItems = [
+  { itemNumber: 1, name: "OS001 T-Shirt", price: 2500 },
+  { itemNumber: 2, name: "OS002 T-Shirt", price: 2500 },
+  { itemNumber: 3, name: "OS003 T-Shirt", price: 2500 },
+];
 
-// item1.save()
-// item2.save()
-// item3.save()
-
-const defaultItems = [item1, item2, item3];
-
-
-function getItems() {
-  let items = Merch.find({}); // Remember, in order to use await you must use async. This Finds ALL ITEMS???
-  return items; // This function returns an array of all the data and we assign it the name 'Items'.
+async function seedMerch() {
+  try {
+    for (const item of defaultItems) {
+      await Merch.findOneAndUpdate(
+        { itemNumber: item.itemNumber },
+        item,
+        { upsert: true, new: true }
+      );
+    }
+    console.log("Merch items ready in database");
+  } catch (e) {
+    console.error("SEEDING FAILED:", e.message);
+  }
 }
 
-
-// const storeItems = new Map([
-//   [1, { priceInPence: 2500, name: "OS001 T-Shirt" },],
-//   [2, { priceInPence: 2500, name: "OS002 T-Shirt" },]
-// ]);
+seedMerch();
 
 
 
