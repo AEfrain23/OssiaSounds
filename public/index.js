@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    document.addEventListener('touchstart', function () {}, false); // Fixes :active state on mobile devices.
+
     // -------------------------------------------------- NAVBAR FUNCTIONALITY --------------------------------------------------
 
     const navbarMenu = document.querySelector(".menu-options");
