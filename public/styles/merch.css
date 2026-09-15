@@ -28,6 +28,13 @@
   padding: 0.4rem;
   width: 7rem;
   border-radius: 5rem;
+  cursor: pointer;
+}
+
+/* button hover effect */
+.tshirts-hoodies .basket-button:active {
+  background-color: black;
+  color: white;
 }
 
 
