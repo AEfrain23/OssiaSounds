@@ -29,19 +29,19 @@
         <div class="cart-options" data-visible="false">
           <div class="card-one">
             <div>Your Basket</div>
-            <span>
+            <span class="cart-close">
               <svg class="inline-block h-3 w-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                 viewBox="0 0 16 16">
                 <polygon
                   points="16 13.74 13.74 16 8 10.26 2.26 16 0 13.74 5.74 8 0 2.26 2.26 0 8 5.74 13.74 0 16 2.26 10.26 8 16 13.74"
                   fill="currentColor"></polygon>
               </svg>
-              <span class="cart-close">Close</span>
+              <span>Close</span>
             </span>
           </div>
           <div class="card-two">
             <div class="basket-message">
-              <h3 style="color: red;">Merchandise store coming soon!</h3>
+              <h3 style="color: black;">Add items to your basketfrom the merch store!</h3>
             </div>
             <% if (locals.commonItem) { %>
               <% commonItem.forEach(item=> { %>
